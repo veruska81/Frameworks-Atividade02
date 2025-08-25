@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head> 
+    <title>Verenxovais - Comprar e vender - Edicao de Usuario</title>
+</head>
+
+<body>
+    <h4>Edicao de Usuario</h4>
+    <form action="/usuario/editar/{{ usuario.id }}" method="post">
+        <p><label for="user">Username</label>
+        <input type="text" id="user" name="user" value="{{usuario.nome}}"></p>
+
+        <p><label for="email">E-mail</label>
+        <input type="text" id="email" name="email" value="{{usuario.email}}"></p>       
+
+        <p><label for="passwd">Password</label>
+        <input type="text" id="passwd" name="passwd" value="{{usuario.senha}}"></p>
+
+        <p><label for="end">Endereco</label>
+        <input type="text" id="end" name="end" value="{{usuario.end}}"></p>
+        
+        <p><input type="submit" value="Alterar"></p>
+    </form>
+    <a href={{url_for("usuario")}}> Cancelar</a>
+</body>
+
+</html>

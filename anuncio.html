@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head> 
+    <title>Verenxovais - Comprar e Vender - Cadastro de Produtos</title>
+</head>
+
+<body>
+    <h4>Cadastro de Produtos</h4>
+    <form action="/anuncio/criar" method="post">
+        <p><label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome"></p>
+
+        <p><label for="desc">Descrição do Produto</label>
+        <textarea rows="4" cols="50" id="desc" name="desc"></textarea></p>       
+
+        <p><label for="qtd">Quantidade</label>
+        <input type="text" id="qtd" name="qtd"></p>
+
+        <p><label for="preco">Preco</label>
+        <input type="text" id="preco" name="preco"></p>
+        
+        <p><label for="cat">Categoria</label>
+        <select id="cat" name="cat">
+                <option value="{{ categoria.id }}">Lencol</option>
+                <option value="{{ categoria.id }}">Edredom</option>
+            {% endfor %}
+        </select></p>
+
+        <p><label for="usu">Usuario</label>
+        <input type="text" id="uso" name="uso"></p>
+
+        <p><input type="submit" value="Cadastrar"></p>
+    </form>
+
+    <h4>Lista de Produtos</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Qtd</th>
+                <th>Preco</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Artex</td>
+                    <td>Bluman</td>
+                    <td>4</td>
+                    <td>R$600,00</td>
+                    <td>Lencol</td>
+                </tr>
+        </tbody>
+                <tbody>
+                <tr>
+                    <td>santista</td>
+                    <td>Flan</td>
+                    <td>2</td>
+                    <td>R$800,00</td>
+                    <td>Edredom</td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

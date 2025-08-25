@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head> 
+    <title>Verenxovais- Comprar e vender - Cadastro de Usuario</title>
+</head>
+
+<body>
+    <h4>Cadastro de Usuario</h4>
+    <form action="/usuario/criar" method="post">
+        <p><label for="user">Usuario</label>
+        <input type="text" id="user" name="user"></p>
+
+        <p><label for="email">E-mail</label>
+        <input type="text" id="email" name="email"></p>       
+
+        <p><label for="passwd">Senha</label>
+        <input type="text" id="passwd" name="passwd"></p>
+
+        <p><label for="end">Endereço</label>
+        <input type="text" id="end" name="end"></p>
+        
+        <p><input type="submit" value="Cadastrar"></p>
+    </form>
+
+    <h4>Lista de Usuarios</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Senha</th>
+                <th>Endereço</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Veruska</td>
+                    <td>Veruska.toledo@toledo.com.br</td>
+                    <td>202040</td>
+                    <td>Rua Maria Aparecida Cuisse</td>
+                    <td><a href={{ url_for("editarusuario",id=usuario.id) }}>Editar</a></td>
+                    <td><a href={{ url_for("deletarusuario",id=usuario.id) }}>Deletar</a></td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
